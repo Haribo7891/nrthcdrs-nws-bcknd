@@ -25,5 +25,13 @@ describe('API - Comments', () => {
           expect(res.body.comment.votes).to.equal(1);
         });
     });
+    it('correctly votes down a comment', () => {
+      const commentId = usefulData.comments[0]._id;
+      return request(app)
+        .put(`/api/comments/${ commentId }?vote=DOWN`)
+        .then((res) => {
+          expect(res.body.comment.votes).to.equal(-1);
+        });
+    });
   });
 });
