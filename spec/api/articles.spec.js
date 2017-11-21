@@ -72,5 +72,13 @@ describe('API - Articles', () => {
           expect(res.body.article.votes).to.equal(1);
         });
     });
+    it('correctly votes down an article', () => {
+      const articleId = usefulData.articles[0]._id;            
+      return request(app)
+        .put(`/api/articles/${ articleId }?vote=DOWN`)
+        .then((res) => {
+          expect(res.body.article.votes).to.equal(-1);
+        });
+    });
   });
 });
