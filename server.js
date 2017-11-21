@@ -4,7 +4,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 
 const { DB } = require('./config');
-const { articles, comments, topics } = require('./routes');
+const { articles, comments, topics, users } = require('./routes');
 const { json } = require('body-parser');
 
 const app = express();
@@ -19,6 +19,7 @@ app.use(json());
 app.use('/api/articles', articles);
 app.use('/api/comments', comments);
 app.use('/api/topics', topics);
+app.use('/api/users', users);
 
 app.use('/*', (req, res) => {
   return res
