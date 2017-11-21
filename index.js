@@ -10,5 +10,4 @@ app.listen(PORT, (err) => {
     message: err
   });
   console.log(`Listening on port ${ PORT }...`);
-})
-;
+});

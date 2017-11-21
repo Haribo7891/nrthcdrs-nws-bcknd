@@ -17,7 +17,8 @@ module.exports = {
   },
   "rules": {
     "no-console": ["off"],
-    "no-var": ["error"],
+    "no-var": ["warn"],
+    "no-unused-vars": ["warn"],
     "no-multi-spaces": ["error"],
     "no-extra-semi": ["error"],
     "prefer-const": ["error"],

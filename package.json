@@ -4,9 +4,8 @@
   "description": "Northcoders News: A REDDIT style project",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "nodemon index.js",
     "dev": "NODE_ENV=development nodemon index.js",
-    "precommit": "npm test",
     "pretest": "npm run lint",
     "lint": "eslint ./",
     "lint:fix": "npm run lint -- --fix",
@@ -24,6 +23,7 @@
     "body-parser": "^1.18.2",
     "chai": "^4.1.2",
     "chance": "^1.0.12",
+    "cors": "^2.8.4",
     "express": "^4.16.2",
     "husky": "^0.14.3",
     "log4js": "^2.3.12",

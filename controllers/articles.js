@@ -1,3 +1,12 @@
-const { Articles, Comments } = require('../models');
+const { Articles } = require('../models');
 
-module.exports = { Articles, Comments };
+module.exports = {
+  getAllArticles (req, res, next) {
+    Articles.find()
+      .then((articles) => res.send({ articles }))
+      .catch((err) => {
+        if (err.name === 'CastError') return next({ err, type: 404 });
+        next(err);
+      });
+  }
+};
