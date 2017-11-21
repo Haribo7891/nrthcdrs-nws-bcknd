@@ -4,7 +4,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 
 const { DB } = require('./config');
-const { articles } = require('./routes');
+const { articles, topics } = require('./routes');
 const { json } = require('body-parser');
 
 const app = express();
@@ -17,6 +17,7 @@ mongoose.connect(DB, { useMongoClient: true })
 app.use(json());
 
 app.use('/api/articles', articles);
+app.use('/api/topics', topics);
 
 app.use('/*', (req, res) => {
   return res
