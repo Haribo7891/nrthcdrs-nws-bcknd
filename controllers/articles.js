@@ -38,5 +38,15 @@ module.exports = {
             next(err);
           });
       });
+  },
+  addArticleVote (req, res, next) {
+    let inc = 0;
+    if (req.query.vote === 'UP') inc = 1;
+    Articles.findByIdAndUpdate(req.params.article_id, { $inc: { votes: inc } }, { new: true })
+      .then((article) => res.send({ article }))
+      .catch((err) => {
+        if (err.name === 'CastError') return next({ err, type: 404 });
+        next(err);
+      });
   }
 };
