@@ -1,6 +1,6 @@
 # Northcoders News Project
 
-My reimplementation of the Northcoders News Sprint.
+My reimplementation of the Northcoders News Sprint, a Reddit style website. A fully tested backend API created using:
 ___
 
 ## Setup

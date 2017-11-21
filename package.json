@@ -10,7 +10,8 @@
     "lint": "eslint ./",
     "lint:fix": "npm run lint -- --fix",
     "test": "NODE_ENV=test mocha ./spec/*",
-    "seed": "node seed/seed.js"
+    "seed:development": "NODE_ENV=development node ./seed/seed.js",
+    "seed:production": "NODE_ENV=production node ./seed/seed.js"
   },
   "keywords": [
     "Northcoders",
@@ -24,6 +25,7 @@
     "chai": "^4.1.2",
     "chance": "^1.0.12",
     "cors": "^2.8.4",
+    "dotenv": "^4.0.0",
     "express": "^4.16.2",
     "husky": "^0.14.3",
     "log4js": "^2.3.12",

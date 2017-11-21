@@ -16,6 +16,8 @@ mongoose.connect(DB, { useMongoClient: true })
 
 app.use(json());
 
+app.use('/', express.static('public'));
+
 app.use('/api/articles', articles);
 app.use('/api/comments', comments);
 app.use('/api/topics', topics);
