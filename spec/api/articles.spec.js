@@ -46,4 +46,21 @@ describe('API - Articles', () => {
         });
     });
   });
+  describe('POST /articles/:article_id/comments', () => {
+    it('adds a new comment to an article', () => {
+      const articleId = usefulData.articles[0]._id;      
+      return request(app)
+        .post(`/api/articles/${ articleId }/comments`)
+        .expect(200)
+        .send({
+          body: 'Great article!',
+          belongs_to: articleId,
+        })
+        .then((res) => {
+          expect(res.body.comments[0]).to.be.an('object');
+          expect(res.body.comments[0].body).to.equal('Great article!');
+          expect(res.body.comments[0].belongs_to.toString()).to.equal(usefulData.articles[0]._id.toString());
+        });
+    });
+  });
 });
