@@ -11,5 +11,16 @@ module.exports = {
         if (err.name === 'CastError') return next({ err, type: 404 });
         next(err);
       });
+  },
+  removeComment (req, res, next) {
+    Comments.findByIdAndRemove(req.params.comment_id)
+      .then((comment) => res.send({
+        comment: comment,
+        msg: 'Comment deleted!'
+      }))
+      .catch((err) => {
+        if (err.name === 'CastError') return next({ err, type: 404 });
+        next(err);
+      });
   }
 };

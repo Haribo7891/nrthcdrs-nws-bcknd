@@ -4,6 +4,7 @@ const { expect } = require('chai');
 const request = require('supertest');
 const saveTestData = require('../../seed/test.seed');
 const app = require('../../server');
+const { Comments } = require('../../models');
 
 describe('API - Comments', () => {
   let usefulData;
@@ -31,6 +32,20 @@ describe('API - Comments', () => {
         .put(`/api/comments/${ commentId }?vote=DOWN`)
         .then((res) => {
           expect(res.body.comment.votes).to.equal(-1);
+        });
+    });
+  });
+  describe('DELETE /comments/:comment_id', () => {
+    it('correctly deletes the comment of a given comment_id', () => {
+      const commentId = usefulData.comments[0]._id;
+      return request(app)
+        .delete(`/api/comments/${ commentId }`)
+        .then((res) => {
+          return Comments.findById(commentId)
+            .then((comment) => {
+              expect(comment).to.equal(null);
+              expect(res.body.msg).to.equal('Comment deleted!');
+            });
         });
     });
   });
