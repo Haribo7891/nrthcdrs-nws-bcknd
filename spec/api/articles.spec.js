@@ -26,4 +26,24 @@ describe('API - Articles', () => {
         });
     });
   });
+  describe('GET /articles/:article_id/comments', () => {
+    it('sends back the correct object with 200 status code when given a valid article_id', () => {
+      const articleId = usefulData.articles[0]._id;
+      return request(app)
+        .get(`/api/articles/${ articleId }/comments`)
+        .expect(200)
+        .then((res) => {
+          expect(res.body.comments[0]).to.be.an('object');
+          expect(res.body.comments[0].created_at).to.be.a('number');
+        });
+    });
+    it('sends back a 404 when given invalid id', () => {
+      return request(app)
+        .get('/api/articles/1/comments')
+        .expect(404)
+        .then((res) => {
+          expect(res.body.msg).to.equal('Page not found / invalid URL request');
+        });
+    });
+  });
 });
