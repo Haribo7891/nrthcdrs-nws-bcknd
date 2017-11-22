@@ -10,8 +10,6 @@ const { json } = require('body-parser');
 const app = express();
 mongoose.Promise = global.Promise;
 
-console.log('*****************', DB);
-
 mongoose.connect(DB, { useMongoClient: true })
   .then(() => console.log(`Successfully connected to: ${ DB }`))
   .catch((err) => console.log(`Connection failed: ${ err }`));
