@@ -18,57 +18,56 @@
   <br/>
 
   <h3>
-    <u>Topics</u>
-  </h3>
-  <p>Return all the topics:</p>
-  <h3>GET
-    <apiEndpoints>/api/topics</apiEndpoints>
-  </h3>
-
-  <p>Return all the articles for a certain topic:</p>
-  <h3>GET
-    <apiEndpoints>/api/topics/:topic/articles</apiEndpoints>
-  </h3>
-  <br/>
-
-  <h3>
     <u>Articles</u>
   </h3>
   <p>Return all the articles:</p>
   <h3>GET
     <apiEndpoints>/api/articles</apiEndpoints>
   </h3>
-
+  
   <p>Return all the comments for an individual article:</p>
   <h3>GET
     <apiEndpoints>/api/articles/:article_id/comments</apiEndpoints>
   </h3>
-
+  
   <p>Increment or Decrement the votes of an article by one. This route requires a vote query of 'up' or 'down':</p>
   <h3>PUT
     <apiEndpoints>/api/articles/:article_id?vote=down</apiEndpoints>
   </h3>
-
+  
   <p>Add a new comment to an article. This route requires a JSON body with a comment key and value pair:</p>
   <h3> POST
     <apiEndpoints>/api/articles/:article_id/comments</apiEndpoints>
   </h3>
-  </br>
+</br>
 
-  <h3>
-    <u>Comments</u>
-  </h3>
-  <p>Increment or Decrement the votes of a comment by one. This route requires a vote query of 'up' or 'down':</p>
-  <h3>PUT
-    <apiEndpoints>/api/comments/:comment_id?vote=up</apiEndpoints>
-  </h3>
+<h3>
+  <u>Comments</u>
+</h3>
+<p>Increment or Decrement the votes of a comment by one. This route requires a vote query of 'up' or 'down':</p>
+<h3>PUT
+  <apiEndpoints>/api/comments/:comment_id?vote=up</apiEndpoints>
+</h3>
 
-  <p>Deletes a comment if the comment was created by the Northcoder user:</p>
-  <h3>DELETE
-    <apiEndpoints>/api/comments/:comment_id </apiEndpoints>
-  </h3>
-  </br>
+<p>Deletes a comment if the comment was created by the Northcoder user:</p>
+<h3>DELETE
+  <apiEndpoints>/api/comments/:comment_id </apiEndpoints>
+</h3>
+</br>
 
+<h3>
+  <u>Topics</u>
+</h3>
+<p>Return all the topics:</p>
+<h3>GET
+  <apiEndpoints>/api/topics</apiEndpoints>
+</h3>
+
+<p>Return all the articles for a certain topic:</p>
+<h3>GET
+  <apiEndpoints>/api/topics/:topic/articles</apiEndpoints>
+</h3>
+<br/>
   <h3>
     <u>Users</u>
   </h3>
@@ -78,5 +77,4 @@
   </h3>
 
 </body>
-
 </html>

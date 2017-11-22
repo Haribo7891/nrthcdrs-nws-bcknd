@@ -16,9 +16,9 @@ module.exports = {
     "sourceType": "module"
   },
   "rules": {
-    "no-console": ["off"],
-    "no-var": ["warn"],
+    "no-console": ["warn"],
     "no-unused-vars": ["warn"],
+    "no-var": ["error"],
     "no-multi-spaces": ["error"],
     "no-extra-semi": ["error"],
     "prefer-const": ["error"],
