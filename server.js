@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 
 const { DB } = require('./config');
 const { articles, comments, topics, users } = require('./routes');
+const CORS = require('cors');
 const { json } = require('body-parser');
 
 const app = express();
@@ -14,6 +15,7 @@ mongoose.connect(DB, { useMongoClient: true })
   .then(() => console.log(`Successfully connected to: ${ DB }`))
   .catch((err) => console.log(`Connection failed: ${ err }`));
 
+app.use(CORS);
 app.use(json());
 
 app.use('/', express.static('public'));
