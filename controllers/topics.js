@@ -7,9 +7,11 @@ module.exports = {
       .catch((err) => next(err));
   },
   getArticlesByTopic (req, res, next) {
-    Promise.all([ Topics.findById(req.params.topic_id), Articles.find() ])
-      .then(([ topic, articles ]) => {
-        res.send({ articles: articles.filter((article) => article.belongs_to === topic.slug) });     
+    return Articles 
+      .find({ belongs_to: req.params.topic })
+      .then((articles) => {
+        if (articles.length === 0) return next({ type: 404 });
+        res.status(200).send({ articles });
       })
       .catch((err) => {
         if (err.name === 'CastError') return next({ err, type: 404 });
