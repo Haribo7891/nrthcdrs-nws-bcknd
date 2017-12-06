@@ -1,5 +1,8 @@
 const router = require('express').Router();
-const { getAllTopics, getArticlesByTopic } = require('../controllers/topics');
+const {
+  getAllTopics,
+  getArticlesByTopic
+} = require('../controllers/topics');
 
 router.route('/')
   .get(getAllTopics);

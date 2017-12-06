@@ -1,8 +1,8 @@
-const { Users, Comments, Topics, Articles } = require('../models');
+const { User, Comment, Topic, Article } = require('../models');
 const savedData = {};
 
 function saveUser () {
-  const user = new Users({
+  const user = new User({
     username: 'northcoder',
     name: 'Awesome Northcoder',
     avatar_url: 'https://avatars3.githubusercontent.com/u/6791502?v=3&s=200'
@@ -23,7 +23,7 @@ function saveTopics () {
     title: 'Cats',
     slug: 'cats'
   }
-  ].map((t) => new Topics(t).save());
+  ].map((t) => new Topic(t).save());
   return Promise.all(topics);
 }
 
@@ -38,7 +38,7 @@ function saveArticles () {
     body: 'something',
     belongs_to: 'football'
   }
-  ].map((a) => new Articles(a).save());
+  ].map((a) => new Article(a).save());
   return Promise.all(articles);
 }
 
@@ -53,7 +53,7 @@ function saveComments (articles) {
     belongs_to: articles[0]._id,
     created_by: 'northcoder'
   }
-  ].map((c) => new Comments(c).save());
+  ].map((c) => new Comment(c).save());
   return Promise.all(comments);
 }
 

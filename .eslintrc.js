@@ -16,8 +16,8 @@ module.exports = {
     "sourceType": "module"
   },
   "rules": {
-    "no-console": ["warn"],
-    "no-unused-vars": ["warn"],
+    "no-console": ["off"],
+    "no-unused-vars": ["error"],
     "no-var": ["error"],
     "no-multi-spaces": ["error"],
     "no-extra-semi": ["error"],
@@ -33,7 +33,7 @@ module.exports = {
     "linebreak-style": ["error", "unix"],
     "quotes": ["error", "single"],
     "no-multiple-empty-lines": ["error", {
-      "max": 2
+      "max": 1
     }],
     "keyword-spacing": ["error", {
       "before": true,

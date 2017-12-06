@@ -1,5 +1,10 @@
 const router = require('express').Router();
-const { getAllArticles, getArticleComments, addArticleComment, addArticleVote } = require('../controllers/articles');
+const { 
+  getAllArticles,
+  getArticleComments,
+  addArticleComment,
+  addArticleVote
+} = require('../controllers/articles');
 
 router.route('/')
   .get(getAllArticles);

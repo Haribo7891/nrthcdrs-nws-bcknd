@@ -30,7 +30,7 @@ ___
 1. In your _**main**_ terminal window, clone this repo to your local machine:
 
 ``` node
-git clone https://github.com/Haribo7891/Northcoders-News-Project
+git clone https://github.com/Haribo7891/nrthcdrs-nws-bcknd
 ```
 
 2. And install the dependencies:
@@ -39,13 +39,13 @@ git clone https://github.com/Haribo7891/Northcoders-News-Project
 npm install
 ```
 
-3. In a _**seperate**_ terminal window, run the following command:
+3. To open up your Mongo database, run the following command:
 
 ``` node
 mongod
 ```
 
-4. Back in your _**main**_ terminal window, populate the database:
+4. To populate the database, run the following command:
 
 ``` node
 npm run seed:development
@@ -57,9 +57,15 @@ npm run seed:development
 npm test
 ```
 
-6. To check the API, in a new browser window navigate to:
+6. To view the API in a browser window, run the following command:
 
 ``` node
+npm start
+```
+
+If it does not navigate you to the browser window, open your browser and type the following address in to the URL bar:
+
+``` HTML
 localhost:3000
 ```
 
@@ -67,7 +73,7 @@ ___
 
 ## API Route Endpoints
 
-The following endpoints are available on both the `localhost` and <https://nrthcdrs-nws-api.herokuapp.com>:
+The following endpoints are available on both the `localhost:3000` and <https://nrthcdrs-nws-api.herokuapp.com>:
 
 ### Articles
 
