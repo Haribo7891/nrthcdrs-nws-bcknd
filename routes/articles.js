@@ -3,7 +3,8 @@ const {
   getAllArticles,
   getArticleComments,
   addArticleComment,
-  addArticleVote
+  addArticleVote,
+  getArticleById
 } = require('../controllers/articles');
 
 router.route('/')
@@ -14,6 +15,7 @@ router.route('/:article_id/comments')
   .post(addArticleComment);
 
 router.route('/:article_id')
+  .get(getArticleById)
   .put(addArticleVote);
 
 module.exports = router;

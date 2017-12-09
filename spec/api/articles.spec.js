@@ -42,6 +42,27 @@ describe('API - Articles', () => {
         });
     });
   });
+  describe('GET /articles/:article_id', () => {
+    it('Sends back the correct object with 200 status code when given a valid article_id', () => {
+      const articleId = usefulData.articles[0]._id;
+      return request(app)
+        .get(`/api/articles/${ articleId }`)
+        .expect(200)
+        .then((res) => {
+          const article = res.body[0];
+          expect(article.title).to.be.a('string');
+          expect(article.votes).to.be.a('number');
+        });
+    });
+    it('Sends back an error message when given an invalid ID', () => {
+      return request(app)
+        .get('/api/articles/1')
+        .expect(400)
+        .then((res) => {
+          expect(res.body.msg).to.equal('Invalid ID');
+        });
+    });
+  });
   describe('GET /articles/:article_id/comments', () => {
     it('Sends back the correct object with 200 status code when given a valid article_id', () => {
       const articleId = usefulData.articles[0]._id;
