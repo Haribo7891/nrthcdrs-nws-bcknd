@@ -10,12 +10,12 @@ const {
 router.route('/')
   .get(getAllArticles);
 
-router.route('/:article_id/comments')
-  .get(getArticleComments)
-  .post(addArticleComment);
-
 router.route('/:article_id')
   .get(getArticleById)
   .put(addArticleVote);
+
+router.route('/:article_id/comments')
+  .get(getArticleComments)
+  .post(addArticleComment);
 
 module.exports = router;
