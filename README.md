@@ -83,6 +83,12 @@ Return all the articles:
 GET /api/articles
 ```
 
+Return an individual article:
+
+``` HTML
+GET /api/articles/:article_id
+```
+
 Return all the comments for an individual article:
 
 ``` HTML
