@@ -1,15 +1,13 @@
-const { Article, Comment } = require('../../models');
+const { Comment } = require('../../models');
 
 const getArticleComments = (req, res, next) => {
-  Promise
-    .all([ Article.findById(req.params.article_id), Comment.find() ])
-    .then(([ article, comments ]) => {
+  Comment
+    .find({ belongs_to: req.params.article_id })
+    .then((comments) => {
+      if (comments.length === 0) return next();
       res
         .status(200)
-        .send({
-          comments: comments.filter((comment) => 
-            comment.belongs_to.toString() === article._id.toString())
-        });
+        .send({ comments });
     })
     .catch((err) => {
       if (err.name === 'CastError') return next({ err, status: 400, msg: 'Invalid ID' });
