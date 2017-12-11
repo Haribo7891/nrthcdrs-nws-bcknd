@@ -21,66 +21,86 @@
     <u>Articles</u>
   </h3>
   <p>Return all the articles:</p>
-  <h3>GET
-    <apiEndpoints>/api/articles</apiEndpoints> <a href="https://nrthcdrs-nws-api.herokuapp.com/api/articles">(Example)</a>
-  </h3>
+  <span>
+    <h3>GET
+      <a class="endpoint" href="https://nrthcdrs-nws-api.herokuapp.com/api/articles">/api/articles</a>
+    </h3>
+  </span>
   
   <p>Return an individual article:</p>
-  <h3>GET
-    <apiEndpoints>/api/articles/:article_id</apiEndpoints> <a href="https://nrthcdrs-nws-api.herokuapp.com/api/articles/5a27ffcc24d5a30cd1965ad4">(Example)</a>
-  </h3>
+  <span>
+    <h3>GET
+      <a class="endpoint" href="https://nrthcdrs-nws-api.herokuapp.com/api/articles/5a27ffcc24d5a30cd1965ad4">/api/articles/:article_id</a>
+    </h3>
+  </span>
 
   <p>Return all the comments for an individual article:</p>
-  <h3>GET
-    <apiEndpoints>/api/articles/:article_id/comments</apiEndpoints> <a href="https://nrthcdrs-nws-api.herokuapp.com/api/articles/5a27ffcc24d5a30cd1965ad4/comments">(Example)</a>
-  </h3>
+  <span>
+    <h3>GET
+      <a class="endpoint" href="https://nrthcdrs-nws-api.herokuapp.com/api/articles/5a27ffcc24d5a30cd1965ad4/comments">/api/articles/:article_id/comments</a>
+    </h3>
+  </span>
   
   <p>Increment or Decrement the votes of an article by one. This route requires a vote query of 'up' or 'down':</p>
-  <h3>PUT
-    <apiEndpoints>/api/articles/:article_id?vote=down</apiEndpoints>
-  </h3>
+  <span>
+    <h3>PUT
+      <a class="endpoint">/api/articles/:article_id?vote=down</a>
+    </h3>
+  </span>
   
   <p>Add a new comment to an article. This route requires a JSON body with a comment key and value pair:</p>
-  <h3> POST
-    <apiEndpoints>/api/articles/:article_id/comments</apiEndpoints>
-  </h3>
+  <span>
+    <h3> POST
+      <a class="endpoint">/api/articles/:article_id/comments</a>
+    </h3>
+  </span>
   <br/>
 
   <h3>
     <u>Comments</u>
   </h3>
   <p>Increment or Decrement the votes of a comment by one. This route requires a vote query of 'up' or 'down':</p>
-  <h3>PUT
-    <apiEndpoints>/api/comments/:comment_id?vote=up</apiEndpoints>
-  </h3>
+  <span>
+    <h3>PUT
+      <a class="endpoint">/api/comments/:comment_id?vote=up</a>
+    </h3>
+  </span>
 
   <p>Deletes a comment if the comment was created by the Northcoder user:</p>
-  <h3>DELETE
-    <apiEndpoints>/api/comments/:comment_id </apiEndpoints>
-  </h3>
+  <span>
+    <h3>DELETE
+      <a class="endpoint">/api/comments/:comment_id </a>
+    </h3>
+  </span>
   <br/>
 
   <h3>
     <u>Topics</u>
   </h3>
   <p>Return all the topics:</p>
-  <h3>GET
-    <apiEndpoints>/api/topics</apiEndpoints> <a href="https://nrthcdrs-nws-api.herokuapp.com/api/topics">(Example)</a>
-  </h3>
+  <span>
+    <h3>GET
+      <a class="endpoint" href="https://nrthcdrs-nws-api.herokuapp.com/api/topics">/api/topics</a>
+    </h3>
+  </span>
 
   <p>Return all the articles for a certain topic:</p>
-  <h3>GET
-    <apiEndpoints>/api/topics/:topic/articles</apiEndpoints> <a href="https://nrthcdrs-nws-api.herokuapp.com/api/topics/coding/articles">(Example)</a>
-  </h3>
+  <span>
+    <h3>GET
+      <a class="endpoint" href="https://nrthcdrs-nws-api.herokuapp.com/api/topics/coding/articles">/api/topics/:topic/articles</a>
+    </h3>
+  </span>
   <br/>
 
   <h3>
     <u>Users</u>
   </h3>
   <p>Returns a JSON object with the profile data for the specified user:</p>
-  <h3>GET
-    <apiEndpoints>/api/users/:username </apiEndpoints> <a href="https://nrthcdrs-nws-api.herokuapp.com/api/users/tickle122">(Example)</a>
-  </h3>
+  <span>
+    <h3>GET
+      <a class="endpoint" href="https://nrthcdrs-nws-api.herokuapp.com/api/users/tickle122">/api/users/:username</a>
+    </h3>
+  </span>
 </br>
 
   <h5>To view the front end of this project please visit this <a href="https://nrthcdrs-nws-frntnd.herokuapp.com" tag="Nrthcdrs Nws Frntnd">link</a>.</h5>
