@@ -1,6 +1,6 @@
 # Northcoders News Project
 
-My reimplementation of the Northcoders News Sprint, a Reddit style website with C.R.U.D method API endpoints. A fully tested backend API created using: `Node.js`, `Express.js` and `MongoDB`. The database has been deployed to [mLab](https://mlab.com/home "mLab homepage") and the API has been deployed to [Heroku](https://nrthcdrs-nws-api.herokuapp.com "Northcoders News API").
+My reimplementation of the Northcoders News Sprint, a Reddit style website with C.R.U.D method API endpoints. A fully tested backend API created using: `Node.js`, `Express.js` and `MongoDB`. The database has been deployed to [mLab](https://mlab.com/home "mLab homepage") and the API has been deployed to [Heroku](https://hwc-nrthcdrs-nws-bcknd.herokuapp.com "Heroku - Northcoders News Backend"). The frontend of the application has also been deployed to [Heroku](https://hwc-nrthcdrs-nws-frntnd.herokuapp.com "Heroku - Northcoders News Frontend") and the associated [Github](https://github.com/Haribo7891/nrthcdrs-nws-frntnd "Github - Northcoders News Frontend") repository.
 ___
 
 ## Setup
