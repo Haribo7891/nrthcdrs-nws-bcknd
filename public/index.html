@@ -1,111 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>HWC Nrthcdrs Nws API</title>
-  <link href="css/styles.css" rel="stylesheet">
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HWC Nrthcdrs Nws API</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0-beta.2/sketchy/bootstrap.min.css" rel="stylesheet" integrity="sha384-9BaUahJwNez+jmowV4jSdSdZIlie6a+VnhBnuzVvBPdvUPC3dDLYIg31Tgw5UzLP" crossorigin="anonymous">
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
 
-<body>
-  <h1>
-    <u>Northcoders News API</u>
-  </h1>
+  <body>
+    <div class="api">
+      <div class="display-3">
+        <u>Northcoders News API</u>
+      </div>
 
-  <h2>The endpoints available are:</h2>
-  <br/>
+      <h2>The endpoints available are:</h2>
+      <br/>
 
-  <h3>
-    <u>Articles</u>
-  </h3>
-  <p>Return all the articles:</p>
-  <span>
-    <h3>GET
-      <a class="endpoint" href="https://hwc-nrthcdrs-nws-bcknd.herokuapp.com/api/articles">/api/articles</a>
-    </h3>
-  </span>
-  
-  <p>Return an individual article:</p>
-  <span>
-    <h3>GET
-      <a class="endpoint" href="https://hwc-nrthcdrs-nws-bcknd.herokuapp.com/api/articles/5a27ffcc24d5a30cd1965ad4">/api/articles/:article_id</a>
-    </h3>
-  </span>
+      <h2>
+        <u>Articles</u>
+      </h2>
+      <p>Return all the articles:</p>
+      <span>
+        <h4>GET
+          <a class="endpoint" href="https://hwc-nrthcdrs-nws-bcknd.herokuapp.com/api/articles">/api/articles</a>
+        </h4>
+      </span>
 
-  <p>Return all the comments for an individual article:</p>
-  <span>
-    <h3>GET
-      <a class="endpoint" href="https://hwc-nrthcdrs-nws-bcknd.herokuapp.com/api/articles/5a27ffcc24d5a30cd1965ad4/comments">/api/articles/:article_id/comments</a>
-    </h3>
-  </span>
-  
-  <p>Increment or Decrement the votes of an article by one. This route requires a vote query of 'up' or 'down':</p>
-  <span>
-    <h3>PUT
-      <a class="endpoint">/api/articles/:article_id?vote=down</a>
-    </h3>
-  </span>
-  
-  <p>Add a new comment to an article. This route requires a JSON body with a comment key and value pair:</p>
-  <span>
-    <h3> POST
-      <a class="endpoint">/api/articles/:article_id/comments</a>
-    </h3>
-  </span>
-  <br/>
+      <p>Return an individual article:</p>
+      <span>
+        <h4>GET
+          <a class="endpoint" href="https://hwc-nrthcdrs-nws-bcknd.herokuapp.com/api/articles/5a30ef81e72d9bea0d2336bb">/api/articles/:article_id</a>
+        </h4>
+      </span>
 
-  <h3>
-    <u>Comments</u>
-  </h3>
-  <p>Increment or Decrement the votes of a comment by one. This route requires a vote query of 'up' or 'down':</p>
-  <span>
-    <h3>PUT
-      <a class="endpoint">/api/comments/:comment_id?vote=up</a>
-    </h3>
-  </span>
+      <p>Return all the comments for an individual article:</p>
+      <span>
+        <h4>GET
+          <a class="endpoint" href="https://hwc-nrthcdrs-nws-bcknd.herokuapp.com/api/articles/5a30ef81e72d9bea0d2336bb/comments">/api/articles/:article_id/comments</a>
+        </h4>
+      </span>
 
-  <p>Deletes a comment if the comment was created by the Northcoder user:</p>
-  <span>
-    <h3>DELETE
-      <a class="endpoint">/api/comments/:comment_id </a>
-    </h3>
-  </span>
-  <br/>
+      <p>Increment or Decrement the votes of an article by one. This route requires a vote query of 'up' or 'down':</p>
+      <span>
+        <h4>PUT
+          <a class="endpoint" href="/">/api/articles/:article_id?vote=down</a>
+        </h4>
+      </span>
 
-  <h3>
-    <u>Topics</u>
-  </h3>
-  <p>Return all the topics:</p>
-  <span>
-    <h3>GET
-      <a class="endpoint" href="https://hwc-nrthcdrs-nws-bcknd.herokuapp.com/api/topics">/api/topics</a>
-    </h3>
-  </span>
+      <p>Add a new comment to an article. This route requires a JSON body with a comment key and value pair:</p>
+      <span>
+        <h4> POST
+          <a class="endpoint" href="/">/api/articles/:article_id/comments</a>
+        </h4>
+      </span>
+      <br/>
 
-  <p>Return all the articles for a certain topic:</p>
-  <span>
-    <h3>GET
-      <a class="endpoint" href="https://hwc-nrthcdrs-nws-bcknd.herokuapp.com/api/topics/coding/articles">/api/topics/:topic/articles</a>
-    </h3>
-  </span>
-  <br/>
+      <h2>
+        <u>Comments</u>
+      </h2>
+      <p>Increment or Decrement the votes of a comment by one. This route requires a vote query of 'up' or 'down':</p>
+      <span>
+        <h4>PUT
+          <a class="endpoint" href="/">/api/comments/:comment_id?vote=up</a>
+        </h4>
+      </span>
 
-  <h3>
-    <u>Users</u>
-  </h3>
-  <p>Returns a JSON object with the profile data for the specified user:</p>
-  <span>
-    <h3>GET
-      <a class="endpoint" href="https://hwc-nrthcdrs-nws-bcknd.herokuapp.com/api/users/tickle122">/api/users/:username</a>
-    </h3>
-  </span>
-</br>
+      <p>Deletes a comment if the comment was created by the Northcoder user:</p>
+      <span>
+        <h4>DELETE
+          <a class="endpoint" href="/">/api/comments/:comment_id </a>
+        </h4>
+      </span>
+      <br/>
 
-  <h5>To view the front end of this project please visit this <a href="https://hwc-nrthcdrs-nws-frntnd.herokuapp.com" tag="Northcoders News Frontend">link</a>.</h5>
-  <h5>Created by <a href="https://github.com/Haribo7891 " tag="Harry's Github Homepage">Harry Crank</a>.</h5>
-  <h5>Inspired by <a href="https://www.reddit.com" tag="Reddit Homepage">Reddit</a> and completed as part of a project at <a href="https://northcoders.com/" tag="Northcoders Homepage">Northcoders</a> bootcamp.</h5>
+      <h2>
+        <u>Topics</u>
+      </h2>
+      <p>Return all the topics:</p>
+      <span>
+        <h4>GET
+          <a class="endpoint" href="https://hwc-nrthcdrs-nws-bcknd.herokuapp.com/api/topics">/api/topics</a>
+        </h4>
+      </span>
 
-</body>
+      <p>Return all the articles for a certain topic:</p>
+      <span>
+        <h4>GET
+          <a class="endpoint" href="https://hwc-nrthcdrs-nws-bcknd.herokuapp.com/api/topics/coding/articles">/api/topics/:topic/articles</a>
+        </h4>
+      </span>
+      <br/>
+
+      <h2>
+        <u>Users</u>
+      </h2>
+      <p>Returns a JSON object with the profile data for the specified user:</p>
+      <span>
+        <h4>GET
+          <a class="endpoint" href="https://hwc-nrthcdrs-nws-bcknd.herokuapp.com/api/users/mordy1">/api/users/:username</a>
+        </h4>
+      </span>
+      </br>
+
+      <p>Created by <a href="https://github.com/Haribo7891 " tag="Harry's Github Homepage">Harry Crank</a>.</p>
+      <p>To view the front end of this project please visit this <a href="https://hwc-nrthcdrs-nws-frntnd.herokuapp.com" tag="Northcoders News Frontend">link</a>.</p>
+      <p>Inspired by <a href="https://www.reddit.com" tag="Reddit Homepage">Reddit</a> and completed as part of a project at <a href="https://northcoders.com/" tag="Northcoders Homepage">Northcoders</a> bootcamp.</p>
+    </div>
+  </body>
 </html>
