@@ -1,31 +1,31 @@
 module.exports = [{
-  username: 'tickle122',
-  name: 'Tom Tickle',
-  avatar_url: 'https://static.independent.co.uk/s3fs-public/thumbnails/image/2015/01/27/18/web-mr-tickle.jpg'
+  username: '123hermy',
+  name: 'Hermione Helpful',
+  avatar_url: 'https://shop.mrmen.com/wp-content/themes/mrmen/assets/characterpic-square-little%20miss%20helpful.jpg'
 },
 {
-  username: 'grumpy19',
-  name: 'Paul Grump',
-  avatar_url: 'https://vignette.wikia.nocookie.net/mrmen/images/7/7d/Mr._Grumpy.PNG/revision/latest?cb=20170411041940'
+  username: 'mordy1',
+  name: 'Mordecai Marvellous',
+  avatar_url: 'https://shop.mrmen.com/wp-content/themes/mrmen/assets/characterpic-square-mr%20marvellous.jpg'
 },
 {
-  username: 'happyamy2016',
-  name: 'Amy Happy',
-  avatar_url: 'https://vignette.wikia.nocookie.net/mrmen/images/f/fe/Mr._Happy.png/revision/latest?cb=20170202192617'
+  username: 'sparkleUnicorn122',
+  name: 'Sally Sparkle',
+  avatar_url: 'https://shop.mrmen.com/wp-content/themes/mrmen/assets/characterpic-square-little%20miss%20sparkle.jpg'
 },
 {
-  username: 'cooljmessy',
-  name: 'Peter Messy',
-  avatar_url: 'https://vignette3.wikia.nocookie.net/mrmen/images/1/1a/MR_MESSY_4A.jpg/revision/latest?cb=20170730171002'
+  username: 'evarbrave',
+  name: 'Balthazar Brave',
+  avatar_url: 'https://shop.mrmen.com/wp-content/themes/mrmen/assets/characterpic-square-mr%20brave.jpg'
 },
 {
-  username: 'weegembump',
-  name: 'Gemma Bump',
-  avatar_url: 'https://vignette.wikia.nocookie.net/mrmen/images/0/0e/MrMen-Bump.jpg/revision/latest/scale-to-width-down/250?cb=20151212195658'
+  username: 'fibfabfoe',
+  name: 'Felicity Fabulous',
+  avatar_url: 'https://shop.mrmen.com/wp-content/themes/mrmen/assets/characterpic-square-little%20miss%20fabulous.jpg'
 },
 {
-  username: 'jessjelly',
-  name: 'Jess Jelly',
-  avatar_url: 'https://vignette.wikia.nocookie.net/mrmen/images/a/a8/Mr_Jelly1.jpg/revision/latest/scale-to-width-down/185?cb=20170519062156'
+  username: 'charmander3000',
+  name: 'Charlie Clever',
+  avatar_url: 'https://shop.mrmen.com/wp-content/themes/mrmen/assets/characterpic-square-mr%20clever.jpg'
 }
 ];
