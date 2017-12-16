@@ -85,20 +85,28 @@ describe('API - Articles', () => {
     });
   });
   describe('POST /articles/:article_id/comments', () => {
-    it('Adds a new comment to an article', () => {
-      const articleId = usefulData.articles[0]._id;      
+    it('Sends back 201 status code if posted comment successfully', () => {
+      const articleId = usefulData.articles[0]._id;
+      const comment = 'Great article!';     
       return request(app)
         .post(`/api/articles/${ articleId }/comments`)
-        .expect(200)
+        .expect(201)
         .send({
-          body: 'Great article!',
-          belongs_to: articleId,
+          comment
+        });
+    });
+    it('Sends back the comment after successful post', () => {
+      const article_id = usefulData.articles[0]._id;
+      const comment = 'Great article!';
+      return request(app)
+        .post(`/api/articles/${ article_id }/comments`)
+        .expect(201)
+        .send({
+          comment
         })
         .then((res) => {
-          const comments = res.body.comments[0];
-          expect(comments).to.be.an('object');
-          expect(comments.body).to.equal('Great article!');
-          expect(comments.belongs_to.toString()).to.equal(articleId.toString());
+          const { body } = res.body.comment;
+          expect(body).to.equal(comment);
         });
     });
   });

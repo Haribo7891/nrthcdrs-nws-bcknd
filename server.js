@@ -29,7 +29,7 @@ app.use('/*', (req, res) => {
 app.use((err, req, res, next) => {
   if (err.status === 404) return res.status(404).send({ msg: err.msg });
   if (err.status === 400) return res.status(400).send({ msg: err.msg });
-  next(err);
+  else return next(err);
 });
 
 app.use((err, req, res) => {

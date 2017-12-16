@@ -1,25 +1,22 @@
-const { Article, Comment } = require('../../models');
+const { Comment } = require('../../models');
 
 const addArticleComment = (req, res, next) => {
-  Comment
-    .update(req.body)
-    .then(() => {
-      Promise
-        .all([ Article.findById(req.params.article_id), Comment.find() ])
-        .then(([ article, comments ]) => {
-          res
-            .status(200)
-            .send({
-              message: 'Comment added!',
-              comments: comments.filter((comment) => 
-                comment.belongs_to.toString() === article._id.toString())
-            });
-        })
-        .catch((err) => {
-          if (err.name === 'CastError') return next({ err, status: 400, msg: 'Invalid ID' });
-          next(err);
-        });
+  const { article_id } = req.params;
+  const { comment, created_by = 'northcoder', created_at = Date.now() } = req.body;
+  if (/^\s*$/.test(comment)) return next({ status: 400, message: 'Invalid input' });
+  const newComment = new Comment({ body: comment, created_by, belongs_to: article_id, created_at });
+  newComment
+    .save()
+    .then((comment) => {
+      res
+        .status(201)
+        .send({ comment });
+    })
+    .catch((err) => {
+      if (err.name === 'CastError') return next({ err, status: 400, msg: 'Invalid input' });
+      next(err);
     });
 };
 
 module.exports = addArticleComment;
+
