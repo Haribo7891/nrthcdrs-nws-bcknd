@@ -48,10 +48,9 @@ describe('API - Articles', () => {
       return request(app)
         .get(`/api/articles/${ articleId }`)
         .expect(200)
-        .then((res) => {
-          const article = res.body[0];
-          expect(article.title).to.be.a('string');
-          expect(article.votes).to.be.a('number');
+        .then(({ body: { article } }) => {
+          expect(article).to.be.an('object');
+          expect(article.title).to.equal(usefulData.articles[0].title);
         });
     });
     it('Sends back an error message when given an invalid ID', () => {
