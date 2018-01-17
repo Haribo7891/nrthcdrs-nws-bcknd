@@ -41,7 +41,7 @@ mongoose.connect(DB, { useMongoClient: true }, function (err) {
 function addNorthcoderUser (done) {
   const userDoc = new models.User({
     username: 'northcoder',
-    name: 'Awesome Northcoder',
+    name: 'Norbert Northcoder',
     avatar_url: 'https://avatars3.githubusercontent.com/u/6791502?v=3&s=200'
   });
   userDoc.save(function (err) {
@@ -102,7 +102,7 @@ function addArticles (topicDocs, done) {
       const usersArticle = articles[0];
       usersArticle.created_by = user.username;
       usersArticle.belongs_to = topic.slug;
-      usersArticle.votes = _.sample(_.range(2, 11));
+      usersArticle.votes = _.sample(_.range(2, 22));
       const usersArticleDoc = new models.Article(usersArticle);
       usersArticleDoc.save(function (err, doc) {
         if (err) {
@@ -114,7 +114,7 @@ function addArticles (topicDocs, done) {
         const usersArticleTwo = articles[0];
         usersArticleTwo.created_by = user.username;
         usersArticleTwo.belongs_to = topic.slug;
-        usersArticleTwo.votes = _.sample(_.range(2, 11));
+        usersArticleTwo.votes = _.sample(_.range(2, 22));
         const usersArticleTwoDoc = new models.Article(usersArticleTwo);
         usersArticleTwoDoc.save(function (err, doc2) {
           if (err) {
@@ -147,7 +147,7 @@ function addComments (docIds, done) {
         }),
         belongs_to: id,
         created_by: userData[_.sample(_.range(6))].username,
-        votes: _.sample(_.range(2, 11)),
+        votes: _.sample(_.range(2, 22)),
         created_at: getRandomStamp()
       };
       const commentDoc = new models.Comment(comment);

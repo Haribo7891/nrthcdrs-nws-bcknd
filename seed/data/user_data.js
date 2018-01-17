@@ -4,13 +4,13 @@ module.exports = [{
   avatar_url: 'https://shop.mrmen.com/wp-content/themes/mrmen/assets/characterpic-square-little%20miss%20helpful.jpg'
 },
 {
-  username: 'mordy1',
+  username: 'mordymar1',
   name: 'Mordecai Marvellous',
   avatar_url: 'https://shop.mrmen.com/wp-content/themes/mrmen/assets/characterpic-square-mr%20marvellous.jpg'
 },
 {
-  username: 'sparkleUnicorn122',
-  name: 'Sally Sparkle',
+  username: 'glitzy122',
+  name: 'Sigourney Sparkle',
   avatar_url: 'https://shop.mrmen.com/wp-content/themes/mrmen/assets/characterpic-square-little%20miss%20sparkle.jpg'
 },
 {
@@ -24,7 +24,7 @@ module.exports = [{
   avatar_url: 'https://shop.mrmen.com/wp-content/themes/mrmen/assets/characterpic-square-little%20miss%20fabulous.jpg'
 },
 {
-  username: 'charmander3000',
+  username: 'charizard',
   name: 'Charlie Clever',
   avatar_url: 'https://shop.mrmen.com/wp-content/themes/mrmen/assets/characterpic-square-mr%20clever.jpg'
 }
